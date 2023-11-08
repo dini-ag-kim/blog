@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/curricula-blog",
+  pathPrefix: "/blog",
   siteMetadata: {
     title: `Blog der DINI-AG-KIM`,
     author: {
