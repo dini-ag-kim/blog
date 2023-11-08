@@ -6,7 +6,7 @@ module.exports = {
       name: `DINI-AG-KIM`,
     },
     description: `Ein Blog der DINI-AG-KIM`,
-    siteUrl: `http://www.curricula-gruppe.de/`,
+    siteUrl: `https://dini-ag-kim.github.io/blog/`,
     email: `dini-ag-kim-curricula@lists.dnb.de`,
     social: {
       github: `dini-ag-kim`,
