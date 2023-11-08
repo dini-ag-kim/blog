@@ -1,6 +1,6 @@
-# Curricula Blog
+# DINI-AG-KIM Blog
 
-This project is the source for the new blog of the curricula group in DINI-AG-KIM.
+This project is the source for the blog of the DINI-AG-KIM.
 This project was created with the gatsby template [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
 ## Adding a new blog post

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
@@ -46,7 +46,7 @@ const Layout = ({ location, title, children }) => {
         GitHub <FontAwesomeIcon icon={faGithub} style={{ color: `#000` }} />
       </a>
       {` | `}
-      <Link to="/rss.xml">Feed</Link>
+      <a href={withPrefix("/rss.xml")}>Feed</a>
     </div>
   )
 
