@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { stringToColor } from "../common"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -67,7 +68,7 @@ const BlogIndex = ({ data, location }) => {
                       {` | `}
                       {post.frontmatter.tags.map((tag, index) => {
                         return (
-                          <small className="chip" key={"tag" + index}>
+                          <small style={{ backgroundColor: stringToColor(tag) }} className="chip" key={"tag" + index}>
                             {tag}
                           </small>
                         )
