@@ -1,0 +1,58 @@
+{
+  "name": "dini-ag-kim-blog",
+  "private": true,
+  "description": "Blog der OER-Metadaten- und Curricula-Gruppe",
+  "version": "0.1.0",
+  "author": "curricula-group",
+  "bugs": {
+    "url": "https://github.com/dini-ag-kim/blog/issues"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "gatsby": "^5.12.9",
+    "gatsby-plugin-canonical-urls": "^5.12.0",
+    "gatsby-plugin-feed": "^5.12.3",
+    "gatsby-plugin-image": "^3.12.3",
+    "gatsby-plugin-manifest": "^5.12.3",
+    "gatsby-plugin-react-helmet": "^6.12.0",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-remark-copy-linked-files": "^6.12.0",
+    "gatsby-remark-images": "^7.12.3",
+    "gatsby-remark-prismjs": "^7.12.0",
+    "gatsby-remark-responsive-iframe": "^6.12.0",
+    "gatsby-remark-smartypants": "^6.12.0",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-remark": "^6.12.3",
+    "gatsby-transformer-sharp": "^5.12.3",
+    "prismjs": "^1.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "typeface-merriweather": "1.1.13",
+    "typeface-montserrat": "1.1.13"
+  },
+  "devDependencies": {
+    "prettier": "3.0.3"
+  },
+  "homepage": "https://github.com/dini-ag-kim/blog#readme",
+  "keywords": [
+    "dini-ag-kim"
+  ],
+  "license": "Apache-2.0",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dini-ag-kim/blog.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  }
+}
