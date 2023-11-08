@@ -46,7 +46,7 @@ const Layout = ({ location, title, children }) => {
         GitHub <FontAwesomeIcon icon={faGithub} style={{ color: `#000` }} />
       </a>
       {` | `}
-      <a href="/rss.xml">Feed</a>
+      <Link to="/rss.xml">Feed</Link>
     </div>
   )
 
