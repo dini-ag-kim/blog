@@ -9,8 +9,6 @@ import { stringToColor } from "../common"
 const BlogIndex = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = pageContext.posts
-  console.log(pageContext)
-  console.log(data)
 
   if (posts.length === 0) {
     return (
