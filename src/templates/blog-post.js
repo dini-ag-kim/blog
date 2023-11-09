@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { stringToColor } from "../common"
+import { Tag } from "../components/tag"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -46,13 +46,7 @@ const BlogPostTemplate = ({ data, location }) => {
             {post.frontmatter?.tags && (
               <span>
                 {` | `}
-                {post.frontmatter.tags.map((tag, index) => {
-                  return (
-                    <span style={{ backgroundColor: stringToColor(tag) }} className="chip" key={"tag" + index}>
-                      {tag}
-                    </span>
-                  )
-                })}
+                {post.frontmatter.tags.map((tag, index) => (<Tag tag={tag} key={index} />))}
               </span>
             )}
           </p>

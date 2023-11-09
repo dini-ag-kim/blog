@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogIndex = path.resolve("./src/templates/blogIndex.js")
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -19,6 +20,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+            }
+            frontmatter {
+              tags
+              title
+              date(formatString: "MMMM DD, YYYY")
+              authors {
+                lastname
+                firstname
+              }
+              description
             }
           }
         }
@@ -35,6 +46,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const tags = result.data.allMarkdownRemark.nodes.flatMap(n => n.frontmatter.tags)
+    .filter((value, index, self) => self.indexOf(value) === index); // Filter out duplicate values
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -53,6 +66,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           previousPostId,
           nextPostId,
         },
+      })
+    })
+  }
+  if (tags.length > 0) {
+    tags.forEach(tag => {
+      createPage({
+        path: tag,
+        component: blogIndex,
+        context: {
+          posts: posts.filter(p => p.frontmatter.tags.includes(tag)),
+          tag
+        }
+
       })
     })
   }
