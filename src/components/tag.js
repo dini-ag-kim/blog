@@ -4,7 +4,7 @@ import { stringToColor } from "../common"
 
 export const Tag = ({ tag }) => {
   return (
-    <Link to={"/" + tag} style={{ backgroundColor: stringToColor(tag) }} className="chip">
+    <Link to={"/tag/" + tag} style={{ backgroundColor: stringToColor(tag) }} className="chip">
       {tag}
     </Link>
   )

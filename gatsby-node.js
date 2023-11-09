@@ -72,7 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (tags.length > 0) {
     tags.forEach(tag => {
       createPage({
-        path: tag,
+        path: "tag/" + tag,
         component: blogIndex,
         context: {
           posts: posts.filter(p => p.frontmatter.tags.includes(tag)),
